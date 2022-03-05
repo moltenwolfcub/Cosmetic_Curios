@@ -1,0 +1,43 @@
+modLoader="javafml" #mandatory
+
+loaderVersion="[39,)" #mandatory
+
+license="All rights reserved"
+
+issueTrackerURL="https://github.com/moltenwolfcub/Cosmetic_Curios/issues" #optional
+
+
+[[mods]] #mandatory
+
+modId="cosmetic_curios" #mandatory
+
+version="1.18.1-1.0.0" #mandatory
+
+displayName="Cosmetic Curios" #mandatory
+
+displayURL="https://github.com/moltenwolfcub/Cosmetic_Curios" #optional
+
+logoFile="logo.png" #optional
+
+credits="Made by me"
+
+authors="MoltenWolfCub" #optional
+
+description='''
+a mod that adds some cosmetic items to curios
+'''
+
+
+[[dependencies.examplemod]]
+    modId="forge" #mandatory
+    mandatory=true #mandatory
+    versionRange="[39,)" #mandatory
+    ordering="NONE"
+    side="BOTH"
+
+[[dependencies.examplemod]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.18.1,1.19)"
+    ordering="NONE"
+    side="BOTH"
