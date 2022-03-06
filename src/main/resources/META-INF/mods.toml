@@ -28,16 +28,21 @@ a mod that adds some cosmetic items to curios
 '''
 
 
-[[dependencies.examplemod]]
+[[dependencies.cosmetic_curios]]
     modId="forge" #mandatory
     mandatory=true #mandatory
     versionRange="[39,)" #mandatory
     ordering="NONE"
     side="BOTH"
 
-[[dependencies.examplemod]]
+[[dependencies.cosmetic_curios]]
     modId="minecraft"
     mandatory=true
     versionRange="[1.18.1,1.19)"
     ordering="NONE"
     side="BOTH"
+
+[[dependencies.cosmetic_curios]]
+    modId="curios"
+    mandatory=true
+    versionRange="[1.18.1-5.0.6.2,)"
