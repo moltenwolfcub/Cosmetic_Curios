@@ -72,8 +72,17 @@ public class HeadModel extends HumanoidModel<LivingEntity> {
     public static MeshDefinition createTopHat() {
         CubeListBuilder head = CubeListBuilder.create();
 
+        //base
         head.texOffs(0, 0);
-        head.addBox(0, 0, 0, 16, 16, 16);
+        head.addBox(-8, -12, -8, 16, 4, 16);
+
+        //ribbon
+        head.texOffs(30, 29);
+        head.addBox(-5, -14, -5, 10, 2, 10);
+
+        //main
+        head.texOffs(0, 20);
+        head.addBox(-5, -23, -5, 10, 9, 10);
 
         return createEmptyHat(head);
     }

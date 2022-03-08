@@ -13,7 +13,7 @@ import java.util.function.Supplier;
 public class CurioLayers {
     
     public static final ModelLayerLocation
-            TOP_HAT = createLayerLocation("drinking_hat");
+            TOP_HAT = createLayerLocation("top_hat");
 
     public static ModelLayerLocation createLayerLocation(String name) {
         return new ModelLayerLocation(new ResourceLocation(CosmeticCurios.MOD_ID, name), name);
@@ -28,6 +28,6 @@ public class CurioLayers {
     }
 
     public static void register(EntityRenderersEvent.RegisterLayerDefinitions event) {
-        register(event, TOP_HAT, layer(HeadModel.createTopHat(), 64, 32));
+        register(event, TOP_HAT, layer(HeadModel.createTopHat(), 128, 64));
     }
 }
