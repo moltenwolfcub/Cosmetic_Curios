@@ -74,15 +74,15 @@ public class HeadModel extends HumanoidModel<LivingEntity> {
 
         //base
         head.texOffs(0, 0);
-        head.addBox(-8, -12, -8, 16, 4, 16);
+        head.addBox(-7, -12, -7, 14, 4, 14);
 
         //ribbon
-        head.texOffs(30, 29);
-        head.addBox(-5, -14, -5, 10, 2, 10);
+        head.texOffs(25, 28);
+        head.addBox(-4, -14, -4, 8, 2, 8);
 
         //main
-        head.texOffs(0, 20);
-        head.addBox(-5, -23, -5, 10, 9, 10);
+        head.texOffs(0, 19);
+        head.addBox(-4, -22, -4, 8, 8, 8);
 
         return createEmptyHat(head);
     }
