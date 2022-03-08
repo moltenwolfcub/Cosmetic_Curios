@@ -1,7 +1,7 @@
 package com.moltenwolfcub.cosmetic_curios.init;
 
 import com.moltenwolfcub.cosmetic_curios.CosmeticCurios;
-import com.moltenwolfcub.cosmetic_curios.items.ItemBase;
+import com.moltenwolfcub.cosmetic_curios.items.itemBases.ItemBaseNonStackable;
 
 import net.minecraft.world.item.Item;
 import net.minecraftforge.registries.DeferredRegister;
@@ -12,5 +12,5 @@ public class ModItems {
     
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CosmeticCurios.MOD_ID);
     
-    public static final RegistryObject<Item> TOP_HAT = ITEMS.register("top_hat", ItemBase::new);
+    public static final RegistryObject<Item> TOP_HAT = ITEMS.register("top_hat", ItemBaseNonStackable::new);
 }

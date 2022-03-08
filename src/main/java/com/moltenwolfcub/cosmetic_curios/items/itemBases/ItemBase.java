@@ -1,4 +1,4 @@
-package com.moltenwolfcub.cosmetic_curios.items;
+package com.moltenwolfcub.cosmetic_curios.items.itemBases;
 
 import com.moltenwolfcub.cosmetic_curios.CosmeticCurios;
 
