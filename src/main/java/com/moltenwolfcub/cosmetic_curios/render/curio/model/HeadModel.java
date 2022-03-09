@@ -86,4 +86,18 @@ public class HeadModel extends HumanoidModel<LivingEntity> {
 
         return createEmptyHat(head);
     }
+
+    public static MeshDefinition createTie() {
+        CubeListBuilder head = CubeListBuilder.create();
+
+        //tie
+        head.texOffs(0, 0);
+        head.addBox(-1, 2, -3.7f, 2, 9, 0);
+
+        //top
+        head.texOffs(5, 0);
+        head.addBox(-2, 0, -3, 4, 2, 1);
+
+        return createEmptyHat(head);
+    }
 }

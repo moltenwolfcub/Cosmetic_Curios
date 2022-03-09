@@ -1,6 +1,7 @@
 {
     "replace": false,
     "values": [
-        "cosmetic_curios:top_hat"
+        "cosmetic_curios:top_hat",
+        "cosmetic_curios:tie"
     ]
 }

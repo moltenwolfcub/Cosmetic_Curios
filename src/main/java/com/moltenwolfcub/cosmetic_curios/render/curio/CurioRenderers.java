@@ -17,5 +17,6 @@ public class CurioRenderers {
 
     public static void register() {
         CuriosRendererRegistry.register(ModItems.TOP_HAT.get(), () -> new CurioRenderer("top_hat", new HeadModel(bakeLayer(CurioLayers.TOP_HAT))));
+        CuriosRendererRegistry.register(ModItems.TIE.get(), () -> new CurioRenderer("tie", new HeadModel(bakeLayer(CurioLayers.TIE))));
     }
 }

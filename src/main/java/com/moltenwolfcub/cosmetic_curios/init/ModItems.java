@@ -13,4 +13,5 @@ public class ModItems {
     public static final DeferredRegister<Item> ITEMS = DeferredRegister.create(ForgeRegistries.ITEMS, CosmeticCurios.MOD_ID);
     
     public static final RegistryObject<Item> TOP_HAT = ITEMS.register("top_hat", ItemBaseNonStackable::new);
+    public static final RegistryObject<Item> TIE = ITEMS.register("tie", ItemBaseNonStackable::new);
 }
