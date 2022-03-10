@@ -14,4 +14,5 @@ public class ModItems {
     
     public static final RegistryObject<Item> TOP_HAT = ITEMS.register("top_hat", ItemBaseNonStackable::new);
     public static final RegistryObject<Item> TIE = ITEMS.register("tie", ItemBaseNonStackable::new);
+    public static final RegistryObject<Item> LEATHER_BELT = ITEMS.register("leather_belt", ItemBaseNonStackable::new);
 }
