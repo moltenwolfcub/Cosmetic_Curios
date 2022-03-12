@@ -81,7 +81,7 @@ public class BeltModel extends HumanoidModel<LivingEntity> {
         CubeListBuilder charm = CubeListBuilder.create();
 
         charm.texOffs(0, 0);
-        charm.addBox(-5, 0, -3, 10, 2.5f, 6);
+        charm.addBox(-5.5f, 0, -3.5f, 11, 2.5f, 7);
 
         return createBelt(charm);
     }
