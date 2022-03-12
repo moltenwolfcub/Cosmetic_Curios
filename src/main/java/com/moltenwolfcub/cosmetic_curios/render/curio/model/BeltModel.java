@@ -16,12 +16,31 @@ import net.minecraft.world.entity.LivingEntity;
 
 public class BeltModel extends HumanoidModel<LivingEntity> {
 
-    public BeltModel(ModelPart part, Function<ResourceLocation, RenderType> renderType) {
+    protected final ModelPart charm = body.getChild("charm");
+
+    private final float xOffset;
+    private final float zOffset;
+    private final float rotation;
+
+    public BeltModel(ModelPart part, Function<ResourceLocation, RenderType> renderType, float xOffset, float zOffset, float rotation) {
         super(part, renderType);
+        this.xOffset = xOffset;
+        this.zOffset = zOffset;
+        this.rotation = rotation;
     }
 
-    public BeltModel(ModelPart part) {
-        this(part, RenderType::entityCutoutNoCull);
+    public BeltModel(ModelPart part, float xOffset, float zOffset, float rotation) {
+        this(part, RenderType::entityCutoutNoCull, xOffset, zOffset, rotation);
+    }
+
+    public void setCharmPosition(int slot) {
+        float xOffset = slot % 2 == 0 ? this.xOffset : -this.xOffset;
+        float zOffset = slot % 4 < 2 ? this.zOffset : -this.zOffset;
+        charm.setPos(xOffset, 9, zOffset);
+
+        float rotation = slot % 4 < 2 ? 0 : (float) -Math.PI;
+        rotation += slot % 2 == 0 ^ slot % 4 >= 2 ? this.rotation : -this.rotation;
+        charm.yRot = rotation;
     }
 
     @Override
@@ -42,7 +61,8 @@ public class BeltModel extends HumanoidModel<LivingEntity> {
                 "body",
                 CubeListBuilder.create()
                         .texOffs(0, 0)
-                        .addBox(-4, 0, -2, 8, 12, 4, deformation),
+                        .addBox(0, 0, 0, 0, 0, 0, deformation),
+                        //.addBox(-4, 0, -2, 8, 12, 4, deformation)
                 PartPose.ZERO
         );
 
@@ -56,14 +76,13 @@ public class BeltModel extends HumanoidModel<LivingEntity> {
     }
 
 
-    //actual hats
+    //actual belts
     public static MeshDefinition createLeatherBelt() {
-        CubeListBuilder belt = CubeListBuilder.create();
+        CubeListBuilder charm = CubeListBuilder.create();
 
-        //base
-        belt.texOffs(0, 0);
-        belt.addBox(-8, -8, -8, 16, 16, 16);
+        charm.texOffs(0, 0);
+        charm.addBox(-5, 0, -3, 10, 2.5f, 6);
 
-        return createBelt(belt);
+        return createBelt(charm);
     }
 }

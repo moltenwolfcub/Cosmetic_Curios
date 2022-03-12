@@ -32,6 +32,6 @@ public class CurioLayers {
     public static void register(EntityRenderersEvent.RegisterLayerDefinitions event) {
         register(event, TOP_HAT, layer(HeadModel.createTopHat(), 128, 64));
         register(event, TIE, layer(HeadModel.createTie(), 16, 16));
-        register(event, LEATHER_BELT, layer(BeltModel.createLeatherBelt(), 16, 16));
+        register(event, LEATHER_BELT, layer(BeltModel.createLeatherBelt(), 32, 32));
     }
 }
